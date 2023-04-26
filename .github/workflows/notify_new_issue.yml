@@ -1,0 +1,14 @@
+name: Notify new issue
+
+on:
+  issues:
+    types:
+      - "opened"
+
+jobs:
+  notify:
+    steps:
+      - name: Notify new issue
+        uses: ./
+        secrets:
+          incoming_webhook: ${{ secrets.MS_TEAMS_INCOMING_WEBHOOK }}
