@@ -12,9 +12,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Inspect event context
-        run: echo '${{ toJSON(github.event.issue.user) }}'
-
       - name: Notify new issue
         uses: ./
         with:
