@@ -2,8 +2,8 @@ name: Notify Teams - New Issue
 description: |
   A GitHub Action that notifies of a new Issue via Microsoft Teams.
 inputs:
-  secrets:
-    incoming_webhook: Public URL of the Microsoft Teams incoming webhook.
+  incoming_webhook:
+    description: Public URL of the Microsoft Teams incoming webhook.
     required: true
 
 outputs: ~
@@ -18,4 +18,4 @@ runs:
         text: "title: ${{ github.event.issue.title }}"
         theme_color: "#00ccff"
         actions: '[{ "@type": "OpenUri", "name": "View issue", "targets": [{ "os": "default", "uri": "${{ github.event.issue.resourcePath }}" }]}]'
-        webhook_uri: ${{ secrets.incoming_webhook }}
+        webhook_uri: ${{ inputs.incoming_webhook }}

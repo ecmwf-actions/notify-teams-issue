@@ -7,8 +7,9 @@ on:
 
 jobs:
   notify:
+    runs-on: ubuntu-latest
     steps:
       - name: Notify new issue
         uses: ./
-        secrets:
+        with:
           incoming_webhook: ${{ secrets.MS_TEAMS_INCOMING_WEBHOOK }}
