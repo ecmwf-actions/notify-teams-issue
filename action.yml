@@ -15,5 +15,5 @@ runs:
         summary: "Opened by ${{ github.event.user.name }}"
         text: "Opened by ${{ github.event.user.name }}"
         theme_color: "#00ccff"
-        actions: '[{ "@type": "OpenUri", "name": "View issue", "targets": [{ "os": "default", "uri": "${{ github.event.issue.url }}" }]}]'
+        actions: '[{ "@type": "OpenUri", "name": "View issue", "targets": [{ "os": "default", "uri": "${{ github.event.issue.html_url }}" }]}]'
         webhook_uri: ${{ inputs.incoming_webhook }}
