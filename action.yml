@@ -11,7 +11,7 @@ runs:
   using: "composite"
   steps:
     - name: Send notification to Teams
-      using: aliencube/microsoft-teams-actions@7af536b59221419054c51e25db4dd180915acb46
+      uses: aliencube/microsoft-teams-actions@7af536b59221419054c51e25db4dd180915acb46
       with:
         title: "New issue opened"
         summary: "title: ${{ github.event.issue.title }}"
