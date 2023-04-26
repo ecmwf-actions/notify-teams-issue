@@ -11,9 +11,9 @@ runs:
     - name: Send notification to Teams
       uses: aliencube/microsoft-teams-actions@7af536b59221419054c51e25db4dd180915acb46
       with:
-        title: "New issue opened"
-        summary: "title: ${{ github.event.issue.title }}"
-        text: "title: ${{ github.event.issue.title }}"
+        title: "New issue: ${{ github.event.issue.title }}"
+        summary: "Opened by ${{ github.event.user.name }}"
+        text: "Opened by ${{ github.event.user.name }}"
         theme_color: "#00ccff"
-        actions: '[{ "@type": "OpenUri", "name": "View issue", "targets": [{ "os": "default", "uri": "${{ github.event.issue.resourcePath }}" }]}]'
+        actions: '[{ "@type": "OpenUri", "name": "View issue", "targets": [{ "os": "default", "uri": "${{ github.event.issue.url }}" }]}]'
         webhook_uri: ${{ inputs.incoming_webhook }}
