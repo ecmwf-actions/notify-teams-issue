@@ -6,7 +6,7 @@ See `action.yml` for required inputs.
 
 ## Usage
 
-Create a file `.github/workflows/notify_new_issue.yml`
+Create a file `.github/workflows/notify-new-issue.yml`
 
 ```
 name: Notify new issue
