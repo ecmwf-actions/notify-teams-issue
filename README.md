@@ -1,3 +1,6 @@
+> [!CAUTION]
+> This repository was moved to https://github.com/ecmwf/notify-teams-issue. Do not update!
+> 
 # Notify Teams - New Issue
 
 A GitHub Action that notifies of a new Issue via Microsoft Teams.
